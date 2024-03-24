@@ -1,1 +1,7 @@
-node_modules
+# ignore genereted from react email
+mail-templates/node_modules
+mail-templates/out
+mail-templates/.react-email
+
+# Ignore everything genereted for go
+bin/

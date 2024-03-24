@@ -13,6 +13,7 @@ import * as React from "react";
 
 interface NotionMagicLinkEmailProps {
   loginCode?: string;
+  url?: string;
 }
 
 const baseUrl = process.env.VERCEL_URL
@@ -29,7 +30,7 @@ export const NotionMagicLinkEmail = ({
       <Container style={container}>
         <Heading style={h1}>Login</Heading>
         <Link
-          href="https://notion.so"
+          href={"URL_PLACEHOLDER"}
           target="_blank"
           style={{
             ...link,
@@ -37,7 +38,7 @@ export const NotionMagicLinkEmail = ({
             marginBottom: "16px",
           }}
         >
-          Click here to log in with this magic link
+          Click here to log in with this magic link + {"URL_PLACEHOLDER"}
         </Link>
         <Text style={{ ...text, marginBottom: "14px" }}>
           Or, copy and paste this temporary login code:
