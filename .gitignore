@@ -7,4 +7,5 @@ mail-templates/.react-email
 bin/
 node_modules
 
+# MacOS Finder
 .DS_Store
