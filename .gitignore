@@ -5,3 +5,6 @@ mail-templates/.react-email
 
 # Ignore everything genereted for go
 bin/
+node_modules
+
+.DS_Store
