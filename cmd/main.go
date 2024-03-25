@@ -1,20 +1,18 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"strings"
+	"net/http"
 )
 
 func main() {
 
-	dat, err := os.ReadFile("out/notion-magic-link.html")
+	mux := http.NewServeMux()
 
-	if err != nil {
-		fmt.Println(err.Error())
+	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(`Hello`))
+	})
+
+	if err := http.ListenAndServe(":8080", mux); err != nil {
+		panic(err)
 	}
-	fileAsStr := string(dat)
-
-	fmt.Println(strings.Replace(fileAsStr, "URL_PLACEHOLDER", "https://dartlsy.app", -1))
-	fmt.Println("Hallo Welt2")
 }
